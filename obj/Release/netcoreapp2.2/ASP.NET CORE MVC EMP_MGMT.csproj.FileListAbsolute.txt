@@ -1,0 +1,5 @@
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Release\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.csprojAssemblyReference.cache
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Release\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.RazorAssemblyInfo.cache
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Release\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.RazorAssemblyInfo.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Release\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.AssemblyInfoInputs.cache
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Release\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.AssemblyInfo.cs

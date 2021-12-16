@@ -1,0 +1,35 @@
+﻿
+@model IEnumerable<ASP.NET_CORE_MVC_EMP_MGMT.Models.Employee>
+@{
+    ViewBag.PageTitle = "Employee Detail";
+}
+
+<h2>Employee Detail</h2>
+@{
+    Employee employee = new Employee();
+    <table>
+        <tr>
+            <td>Employee Id:</td>
+            <td>@employee.EmployeeId</td>
+        </tr>
+        <tr>
+            <td>Employee Name:</td>
+            <td>@employee.EmployeeName</td>
+        </tr>
+        <tr>
+            <td>Employee Gender:</td>
+            <td>@employee.EmployeeGender</td>
+        </tr>
+        <tr>
+            <td>Employee City:</td>
+            <td>@employee.EmployeeCity</td>
+        </tr>
+    </table>
+}
+
+
+
+
+
+
+

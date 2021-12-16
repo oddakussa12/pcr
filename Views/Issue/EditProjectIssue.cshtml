@@ -1,0 +1,95 @@
+﻿
+@model EditUpdateIssue
+@{
+    ViewData["Title"] = "Editing Project Issue";
+}
+<head>
+    <link rel="stylesheet" href="~/css/AddProjectRisk.css" />
+</head>
+<div class="row" style="background-color:white; margin-left:10%; width:80%;">
+    <div class="col-md-10 shadow-lg p-3 mb-5 bg-white rounded" style="margin-left:8%; margin-top:80px;">
+        <form asp-controller="Risk" asp-action="EditProjectIssue" method="post">
+            <!--this input field store the id of the risk which we are updating-->
+            <input hidden asp-for="IssueCode" />
+            <br />
+            <h3 style="color:#003cff;">Editing Project Issue</h3>
+            <hr />
+            <div class="text-success">@ViewBag.Success</div>
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="leftright" style="padding-left:5%;padding-right:5%;">
+                <div class="form-group">
+                    <label asp-for="IssueDescription"></label>
+                    <input asp-for="IssueDescription" class="form-control" />
+                    <span asp-validation-for="IssueDescription" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IssueOwner"></label>
+                    <input asp-for="IssueOwner" class="form-control" />
+                    <span asp-validation-for="IssueOwner" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IssueOpenDate"></label>
+                    <input asp-for="IssueOpenDate" class="form-control" />
+                    <span asp-validation-for="IssueOpenDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IssueCloseDate"></label>
+                    <input asp-for="IssueCloseDate" class="form-control" />
+                    <span asp-validation-for="IssueCloseDate" class="text-danger"></span>
+                </div>
+                
+
+                
+            </div>
+            <div class="leftright" style="padding-left:5%;padding-right:5%;">
+                @*<div class="form-group">
+                    <label asp-for="IssueStatus"></label>
+                    <input asp-for="IssueStatus" class="form-control" />
+                    <span asp-validation-for="IssueStatus" class="text-danger"></span>
+                </div>*@
+                <div class="form-group">
+                    <label asp-for="IssueStatus"></label>
+                    <div>
+                        <select asp-for="IssueStatus" class="custom-select mr-sm-2"
+                                asp-items="Html.GetEnumSelectList<ClosedOpened>()">
+                            <option value="">Please select</option>
+                        </select>
+                    </div>
+                    <span asp-validation-for="IssueStatus" class="text-danger"></span>
+                </div>
+                @*<div class="form-group">
+            <label asp-for="IssueImpact"></label>
+            <input asp-for="IssueImpact" class="form-control" />
+            <span asp-validation-for="IssueImpact" class="text-danger"> </span>
+        </div>*@
+                <div class="form-group">
+                    <label asp-for="IssueImpact"></label>
+                    <div>
+                        <select asp-for="IssueImpact" class="custom-select mr-sm-2"
+                                asp-items="Html.GetEnumSelectList<LowMediumHigh>()">
+                            <option value="">Please select</option>
+                        </select>
+                    </div>
+                    <span asp-validation-for="IssueImpact" class="text-danger"></span>
+                </div>
+                <div class="form-group" style="padding-bottom:8%;">
+                    <label asp-for="IssueAgreedSolution"></label>
+                    <input asp-for="IssueAgreedSolution" class="form-control" />
+                    <span asp-validation-for="IssueAgreedSolution" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-spinner fa-spin"></i> Update</button>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <a asp-controller="Issue" asp-action="IssueTable" asp-route-id="@ViewBag.ProjectCode" class="btn btn-secondary btn-block"><i class=" fa fa-table"></i> Back To Table</a>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+</div>

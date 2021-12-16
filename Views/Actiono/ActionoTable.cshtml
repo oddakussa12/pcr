@@ -1,0 +1,170 @@
+﻿<!--SHOW RISK IN THE FORM OF TABLE FOR SPECIFIC PROJECT-->
+@model IEnumerable<ASP.NET_CORE_MVC_EMP_MGMT.Models.Actiono>
+<head>
+    <!--<link rel="stylesheet" href="~/css/site.css" />-->
+    <link rel="stylesheet" href="~/css/index.css" />
+</head>
+<body>
+    
+    <!-- create two column of the page-->
+    <div class="row">
+        <div class="left-page" style="margin-top:60px;">
+            <h3 style="font-family:Helvetica, Arial, sans-serif ;color:white; text-align:center;">Menu</h3>
+            <hr style="border-width: 6px;color:white;" />
+            <div>
+                <a asp-controller="Home" asp-action="Index">
+                    <button type="button" class="collapsible" style="font-size:17px;">
+                        <i class="fas fa-home" style="padding-right:12px;"></i>
+                        Home
+                    </button>
+                </a>
+            </div>
+            @*<button type="button" class="collapsible" style="font-size:17px;">
+                <i class="fa fa-folder" style="padding-right:12px;"></i>Projects  <i class="fas fa-angle-right"></i>
+            </button>*@
+            <div>
+                <a asp-controller="Project" asp-action="CreateNewProject">
+                    <button type="button" class="collapsible" style="font-size:17px;">
+                        <i class="fas fa-folder-plus" style="padding-right:12px;"></i>Create Project
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a asp-controller="Project" asp-action="ProjectSummary">
+                    <button type="button" class="collapsible" style="font-size:17px;">
+                        <i class="fa fa-file-signature" style="padding-right:12px;">  </i>Project Summary
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a asp-controller="Risk" asp-action="GenerateReport">
+                    <button type="button" class="collapsible btn btn-primary" style="font-size:17px;">
+                        <i class="fa fa-file-download" style="padding-right:12px;">  </i>  Generate Report
+                    </button>
+                </a>
+
+            </div>
+        </div><!--end left page-->
+        <div class="right-page" style="background-color:white;">
+            <h6 style="margin-left:60%;">
+                You are at: <a asp-controller="home" asp-action="index">
+                    Projects >>
+                </a><a asp-controller="Project" asp-action="ProjectSummary">
+                    @ViewBag.ProjectName >>
+                </a> <a href="#">Action Log</a>
+            </h6>
+            <hr />
+            <div class="row">
+                <div class="pill-nav" style="width:75%;margin-left:1%;">
+                    <a asp-controller="Schedule" asp-action="ScheduleTable" asp-route-id="@ViewBag.ProjectCode">Schedule</a>
+                    <a asp-controller="Risk" asp-action="RiskTable" asp-route-id="@ViewBag.ProjectCode">Risk Log</a>
+                    <a asp-controller="Issue" asp-action="IssueTable" asp-route-id="@ViewBag.ProjectCode">Issue Log</a>
+                    <a class="active" asp-controller="Actiono" asp-action="ActionoTable">Action Log</a>
+                    
+                </div>
+                <div>
+                    <form asp-action="ActionoTable" asp-controller="Actiono" method="post" style="width:100%; padding:0px;">
+                        <div class="row input-group">
+                            <input type="text" name="search" id="search" class="form-control" placeholder="Search action" />
+                            <div>
+                                <input type="submit" value="Search" class="btn btn-outline-primary" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr />
+            <div class="right-row">
+                <table border="1" style="width:100%">
+                    <thead style="background-color:darkorange;">
+                        <tr>
+                            <th>Code</th>
+                            <th>Description</th>
+                            <th>Owner</th>
+                            <th>Responsible</th>
+                            <th>Deadline</th>
+                            <th>Status</th>
+                            <th>Last Update</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var actiono in Model)
+                        {
+                            <tr>
+                                <td>@actiono.ActionoCode</td>
+                                <td>@actiono.ActionoDescription</td>
+                                <td>@actiono.ActionoOwner</td>
+                                <td>@actiono.ActionoResponsible</td>
+                                <td>@actiono.ActionoDeadline</td>
+                                <td>@actiono.ActionnoStatus</td>
+                                <td>@actiono.ActionoLastUpdate</td>
+                                <td>
+                                    <a asp-controller="Actiono" asp-action="EditProjectActiono" asp-route-id="@actiono.ActionoCode">
+                                        <i class="fa fa-marker"></i>
+                                    </a>
+                                    <a asp-controller="Actiono" asp-action="DeleteProjectActiono" style="margin-left:15px;"
+                                       asp-route-id="@actiono.ActionoCode" class="text-danger"
+                                       onclick="return confirm('Are you sure to delete this Action?')">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+
+                                </td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+            <hr />
+
+
+            <div class="row" style="margin-top:80px;">
+                <div style="width:35%;">
+                    <a asp-controller="Actiono" asp-action="ExportAction">
+                        <button class="btn btn-outline-primary" style="width:200px; margin-left:15%;">
+                            Download <i class="fa fa-file-download"></i>
+                        </button>
+                    </a>
+                </div>
+
+                <div style="width:30%;">
+                    @using (Html.BeginForm("Import", "Actiono", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+
+                        @Html.Raw(ViewBag.Error)
+                        <input type="file" name="formFile" class="btn btn-outline-primary" />
+                    <br />
+                        <br/>
+                        
+                        <button class="btn btn-outline-primary" type="submit" style="width:200px; margin-left:20%;">
+                            Import Excel <i class="fa fa-file-import"></i>
+                        </button>
+                    }
+                </div>
+                
+
+                
+                @*<div style="width:33%;">
+                    <a asp-controller="Actiono" asp-action="Import">
+                        <button class="btn btn-outline-primary" type="submit" style="width:200px; margin-left:50%;">
+                            Import Excel <i class="fa fa-file-import"></i>
+                        </button>
+                    </a>
+                </div>*@
+               
+
+                <div style="width:20%;">
+                    <a asp-controller="Actiono" asp-action="AddActiono">
+                        <button class="btn btn-outline-primary" style="width:200px; margin-left:50%;">
+                            Add Action <i class="fa fa-plus"></i>
+                        </button>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div><!-- end div .row-->
+
+</body>

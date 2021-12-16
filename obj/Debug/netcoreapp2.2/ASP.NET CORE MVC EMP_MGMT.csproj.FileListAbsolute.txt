@@ -1,0 +1,56 @@
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\bin\Debug\netcoreapp2.2\.filenesting.json
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\bin\Debug\netcoreapp2.2\nlog.config.txt
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\bin\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.deps.json
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\bin\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.runtimeconfig.json
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\bin\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.runtimeconfig.dev.json
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\bin\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.dll
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\bin\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.pdb
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\bin\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.Views.dll
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\bin\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.Views.pdb
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.RazorAssemblyInfo.cache
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.RazorAssemblyInfo.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.AssemblyInfoInputs.cache
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.AssemblyInfo.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.TagHelpers.input.cache
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.TagHelpers.output.cache
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.RazorCoreGenerate.cache
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Account\ForgotPassword.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Account\ForgotPasswordConfirmation.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Account\ResetPassword.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Account\ResetPasswordConfirmation.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Actiono\ActionoTable.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Actiono\AddActiono.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Actiono\EditProjectActiono.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Actiono\index.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Shit.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Home\Home.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Import\Index.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Issue\AddIssue.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Issue\EditProjectIssue.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Issue\IssueTable.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Login\Login.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Project\CreateNewProject.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Project\EditUpdateProject.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Project\ProjectSummary.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Risk\EditProjectRisk.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Risk\embi.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Risk\RiskTable.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Schedule\ScheduleTable.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.RazorTargetAssemblyInfo.cache
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.RazorTargetAssemblyInfo.cs
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.Views.pdb
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.dll
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.pdb
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.csproj.CopyComplete
+C:\Users\odda_kussa\source\repos\ASP.NET CORE MVC EMP_MGMT\obj\Debug\netcoreapp2.2\ASP.NET CORE MVC EMP_MGMT.csprojAssemblyReference.cache

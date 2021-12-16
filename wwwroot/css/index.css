@@ -1,0 +1,114 @@
+﻿/* STYLE FOR THE TWO COLUMNS OF THE PAGE I.E LEFT AND RIGHT PAGES*/
+/* Create two equal columns that floats next to each other */
+.right-page {
+    float: left;
+    width: 80%;
+    padding: 10px;
+    /*height: 800px;  Should be removed. Only for demonstration */
+    background-color: white;
+    margin-left: 20%;
+    margin-top: 60px;
+    
+}
+
+.left-page {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    height: 800px;
+    background-color: #003399;
+    position: fixed;
+    margin-top: 60px;
+    
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* STYLE FOR THE LEFT PAGE COLLAPSIBLE*/
+.collapsible {
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    background-color: #003399;
+    font-size: 20px;
+    font-family: Helvetica, Arial, sans-serif;
+    padding:10px;
+}
+.coll.collapsible:hover{
+    text-decoration:underline;
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* stye for the right page containg the cards and table*/
+/* Float four columns side by side */
+.right-column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+    background-color:white;
+}
+
+/* Remove extra left and right margins, due to padding */
+.right-row {
+    margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.right-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .right-column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/* Style the counter cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: white;
+
+    margin-bottom:5px;
+    height:100px;
+}
+.card:hover {
+    box-shadow: 10px 10px 5px gray;
+}
+/*STYLE FOR TABLE ON INDEX PAGE*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-left: 7px;
+}
+
+th, td {
+    text-align: left;
+    padding: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

@@ -1,0 +1,92 @@
+﻿
+@model EditUpdateRisk
+@{
+    ViewData["Title"] = "Editing Project Risk";
+}
+<head>
+    <link rel="stylesheet" href="~/css/AddProjectRisk.css" />
+</head>
+<div class="row" style="background-color:white; margin-left:10%; width:80%;">
+    <div class="col-md-10 shadow-lg p-3 mb-5 bg-white rounded" style="margin-left:8%;margin-top:80px;">
+        <form asp-controller="Risk" asp-action="EditProjectRisk" method="post">
+            <!--this input field store the id of the risk which we are updating-->
+            <input hidden asp-for="RiskCode" />
+            
+            <h3 style="color:#003cff;">Editing Project Risk</h3>
+            <hr />
+            <div class="text-success">@ViewBag.Success</div>
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="leftright" style="padding-left:5%;padding-right:5%;">
+                <div class="form-group">
+                    <label asp-for="RiskDescription"></label>
+                    <input asp-for="RiskDescription" class="form-control" name="RiskDescription" />
+                    <span asp-validation-for="RiskDescription" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RiskOwner"></label>
+                    <input asp-for="RiskOwner" class="form-control" name="RiskOwner" />
+                    <span asp-validation-for="RiskOwner" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RiskOpenDate"></label>
+                    <input asp-for="RiskOpenDate" class="form-control" />
+                    <span asp-validation-for="RiskOpenDate" class="text-danger"></span>
+                </div>
+                @*<div class="form-group">
+                    <label asp-for="RiskImpact"></label>
+                    <input asp-for="RiskImpact" class="form-control" />
+                    <span asp-validation-for="RiskImpact" class="text-danger"></span>
+                </div>*@
+                <div class="form-group">
+                    <label asp-for="RiskImpact"></label>
+                    <div>
+                        <select asp-for="RiskImpact" class="custom-select mr-sm-2"
+                                asp-items="Html.GetEnumSelectList<LowMediumHigh>()">
+                            <option value="">Please select</option>
+                        </select>
+                    </div>
+                    <span asp-validation-for="RiskImpact" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="leftright" style="padding-left:5%; padding-right:5%;">
+                <div class="form-group">
+                    <label asp-for="RiskCloseDate"></label>
+                    <input asp-for="RiskCloseDate" class="form-control" />
+                    <span asp-validation-for="RiskCloseDate" class="text-danger"></span>
+                </div>
+                @*<div class="form-group">
+                    <label asp-for="RiskStatus"></label>
+                    <input asp-for="RiskStatus" class="form-control" />
+                    <span asp-validation-for="RiskStatus" class="text-danger"></span>
+                </div>*@
+                <div class="form-group">
+                    <label asp-for="RiskStatus"></label>
+                    <div>
+                        <select asp-for="RiskStatus" class="custom-select mr-sm-2"
+                                asp-items="Html.GetEnumSelectList<ClosedOpened>()">
+                            <option value="">Please select</option>
+                        </select>
+                    </div>
+                    <span asp-validation-for="RiskStatus" class="text-danger"></span>
+                </div>
+                <div class="form-group" style="padding-bottom:8%;">
+                    <label asp-for="RiskAgreedSolution"></label>
+                    <input asp-for="RiskAgreedSolution" class="form-control" />
+                    <span asp-validation-for="RiskAgreedSolution" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-spinner fa-spin "></i> Update</button>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <a asp-controller="Risk" asp-action="RiskTable" asp-route-id="@ViewBag.ProjectCode" class="btn btn-secondary btn-block"><i class=" fa fa-table"></i> Back To Table</a>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+</div>

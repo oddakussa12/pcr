@@ -1,0 +1,61 @@
+﻿
+@model Login
+@{
+    ViewBag.Title = "PM Login";
+    Layout = null;
+}
+    <head>
+        <link rel="stylesheet" href="~/css/login.css" />
+        <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/fontawesome/css/all.css" />
+        
+    </head>
+    <body onload="document.getElementById('id01').style.display='block'" style="width:auto;">
+        
+        <div id="id01" class="modal">
+            <div class="row">
+                <div style="margin-left:37%; height:600px; width:25%;">
+                    <form method="post" class="modal-content animate" style="padding:16px;">
+                        <div class="imgcontainer">
+                            <img src="~/images/ielogo.png" alt="IE logo" class="avatar">
+                            <h3 style="text-align:center;">Login</h3>
+                        </div>
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Email"></label>
+                            <input asp-for="Email" class="form-control" placeholder="Your email . . ." />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Password"></label>
+                            <input asp-for="Password" class="form-control" placeholder="Your password . . ." />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        @*<div class="form-group">
+                            <div class="custom-checkbox">
+                                <label asp-for="RememberMe">
+                                    <input asp-for="RememberMe" />
+                                    @Html.DisplayNameFor(m => m.RememberMe)
+                                </label>
+                            </div>
+                        </div>*@
+                        <button type="submit" class="btn btn-primary has-spinner">
+                            <span><i class="fa fa-spinner fa-spin"></i></span>
+                            Login
+                        </button>
+                        <div style="text-align:right;padding-top:15px;">
+                            <a asp-action="ForgotPassword" asp-controller="Account">Forgot Password?</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <!--disable back button of the browser in login page-->
+        <script type="text/javascript">
+            function preback() { window.history.forward(); }
+            setTimeout("preback()", 0);
+            window.onunload = function () { null };
+        </script>
+
+    </body>

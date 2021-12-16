@@ -1,0 +1,159 @@
+﻿<!--SHOW RISK IN THE FORM OF TABLE FOR SPECIFIC PROJECT-->
+@model IEnumerable<ASP.NET_CORE_MVC_EMP_MGMT.Models.Risk>
+@using ASP.NET_CORE_MVC_EMP_MGMT.Models
+<head>
+    <!--<link rel="stylesheet" href="~/css/site.css" />-->
+    <link rel="stylesheet" href="~/css/index.css" />
+</head>
+<body>
+    <!-- create two column of the page-->
+    <div class="row">
+        <div class="left-page" style="margin-top:60px;">
+            <h3 style="font-family:Helvetica, Arial, sans-serif ;color:white; text-align:center;">Menu</h3>
+            <hr style="border-width: 6px;color:white;" />
+            <div>
+                <a asp-controller="Home" asp-action="Index">
+                    <button type="button" class="collapsible" style="font-size:17px;">
+                        <i class="fas fa-home" style="padding-right:12px;"></i>
+                        Home
+                    </button>
+                </a>
+            </div>
+            
+            <div>
+                <a asp-controller="Project" asp-action="CreateNewProject">
+                    <button type="button" class="collapsible" style="font-size:17px;">
+                        <i class="fas fa-folder-plus" style="padding-right:12px;"></i>Create Project
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a asp-controller="Project" asp-action="ProjectSummary">
+                    <button type="button" class="collapsible" style="font-size:17px;">
+                        <i class="fa fa-file-signature" style="padding-right:12px;">  </i>Project Summary
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a asp-controller="Risk" asp-action="GenerateReport">
+                    <button type="button" class="collapsible btn btn-primary" style="font-size:17px;">
+                        <i class="fa fa-file-download" style="padding-right:12px;">  </i>  Generate Report
+                    </button>
+                </a>
+
+            </div>
+        </div><!--end left page-->
+        <div class="right-page" style="background-color:white; margin-top:60px;">
+            <h6 style="margin-left:60%;">
+                You are at: <a asp-controller="home" asp-action="index">
+                    Projects >>
+                </a><a asp-controller="Project" asp-action="ProjectSummary">
+                    @ViewBag.ProjectName >>
+                </a> <a href="#">Risk Log</a>
+            </h6>
+            <hr />
+            <div class="row">
+                <div class="pill-nav" style="width:75%;margin-left:1%;">
+                    <a asp-controller="Schedule" asp-action="ScheduleTable" asp-route-id="@ViewBag.ProjectCode">Schedule</a>
+                    <a class="active" asp-controller="Risk" asp-action="RiskTable">Risk Log</a>
+                    <a asp-controller="Issue" asp-action="IssueTable" asp-route-id="@ViewBag.ProjectCode">Issue Log</a>
+                    <a asp-controller="Actiono" asp-action="ActionoTable" asp-route-id="@ViewBag.ProjectCode">Action Log</a>
+
+                </div>
+                <div>
+                    <form asp-action="RiskTable" asp-controller="Risk" method="post" style="width:100%; padding:0px;">
+                        <div class="row input-group">
+                            <input type="text" name="search" id="search" class="form-control" placeholder="Search risk" />
+                            <div>
+                                <input type="submit" value="Search" class="btn btn-outline-primary" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr />
+            <div class="right-row">
+                <table border="1" style="width:100%">
+                    <thead style="background-color:darkorange;">
+                        <tr>
+                            <th>Code</th>
+                            <th>Description</th>
+                            <th>Owner</th>
+                            <th>Open Date</th>
+                            <th>Close Date</th>
+                            <th>Status</th>
+                            <th>Impact</th>
+                            <th>Solution</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var risk in Model)
+                        {
+                            <tr>
+                                <td>@risk.RiskCode</td>
+                                <td>@risk.RiskDescription</td>
+                                <td>@risk.RiskOwner</td>
+                                <td>@risk.RiskOpenDate</td>
+                                <td>@risk.RiskCloseDate</td>
+                                <td>@risk.RiskStatus</td>
+                                <td>@risk.RiskImpact</td>
+                                <td>@risk.RiskAgreedSolution</td>
+                                <td>
+                                    <a asp-controller="Risk" asp-action="EditProjectRisk" asp-route-id="@risk.RiskCode">
+                                        <i class="fa fa-marker"></i>
+                                    </a>
+                                    <a asp-controller="Risk" asp-action="DeleteProjectRisk" style="margin-left:15px;"
+                                       asp-route-id="@risk.RiskCode" class="text-danger"
+                                       onclick="return confirm('Are you sure to delete this risk?')">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                    
+
+
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+
+
+            <hr />
+            <div class="row" style="margin-top:80px;">
+                <div style="width:50%;">
+                    <a asp-controller="Risk" asp-action="ExportRisk">
+                        <button class="btn btn-outline-primary" style="width:200px; margin-left:15%;"
+                                title="Download this table">
+                            Download <i class="fa fa-file-download"></i>
+                        </button>
+                    </a>
+                </div>
+                <div style="width:50%;">
+                    <a asp-controller="Risk" asp-action="embi">
+                        <button class="btn btn-outline-primary" style="width:200px; margin-left:50%;">
+                            Add Risk <i class="fa fa-plus"></i>
+                        </button>
+                    </a>
+                </div>
+               
+            </div>
+            @*<div class="row">
+                <div style="width:50%;">
+                    <a href="https://launchpad.37signals.com/authorization/new?type=web_server&client_id=0f8b523480cadae39c3941362721d775803a8ebf-id&redirect_uri=https://localhost:44369-uri">
+                        basecamp
+                    </a>
+                </div>
+                <div style="width:50%;">
+                    <a asp-controller="BasecampConnection" asp-action="Basecamp"> and this from base camp
+                    </a>
+                </div>
+            </div>*@
+        </div>
+    </div><!-- end div .row-->
+    <!--POPUP WINDOW WHEN EDIT BUTTON OF EACH RISK IS CLICKED-->
+
+
+</body>

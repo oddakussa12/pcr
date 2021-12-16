@@ -1,0 +1,66 @@
+﻿/* STYLE FOR THE TWO COLUMNS OF THE PAGE I.E LEFT AND RIGHT PAGES*/
+/* Create two equal columns that floats next to each other */
+.right-page {
+    float: left;
+    width: 80%;
+    padding: 10px;
+    height: 800px; /* Should be removed. Only for demonstration */
+    background-color: white;
+    margin-left: 20%;
+}
+
+.left-page {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    height: 800px; /* Should be removed. Only for demonstration */
+    background-color: #003399;
+    position: fixed;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* STYLE FOR THE LEFT PAGE COLLAPSIBLE*/
+.collapsible {
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    background-color: #003399;
+    font-size: 20px;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 10px;
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/*STYLE FOR TABLE*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-left: 7px;
+}
+th{
+    background-color:peru;
+}
+th, td {
+    text-align: left;
+    padding: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

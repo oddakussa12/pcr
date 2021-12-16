@@ -1,0 +1,65 @@
+﻿@using ASP.NET_CORE_MVC_EMP_MGMT.Models
+@model Project
+@{
+    ViewData["Title"] = "Creating new project";
+}
+<head>
+    <link rel="stylesheet" href="~/css/CreateNewProject.css" />
+</head>
+<div class="row" style="background-color:white; margin-left:10%; width:80%;">
+    <div class="col-md-10 shadow-lg p-3 mb-5 bg-white rounded" style="margin-left:8%; margin-top:80px;">
+        <form asp-controller="ProjectController" asp-action="CreateNewProject" method="post">
+            <br />
+            <h3 style="color:#003cff;">Creating new Project</h3>
+            <hr />
+            <div class="text-success">@ViewBag.Success</div>
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="leftright" style="padding-left:5%;padding-right:5%;">
+                <div class="form-group">
+                    <label asp-for="projectName"></label>
+                    <input asp-for="projectName" class="form-control" />
+                    <span asp-validation-for="projectName" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="ProjectPM_Name"></label>
+                    <div>
+                        <select asp-for="ProjectPM_Name" class="custom-select mr-sm-2"
+                                asp-items="@(new SelectList(ViewBag.Users))">
+                            <option value="" selected disabled>Please select</option>
+                        </select>
+                    </div>
+                    <span asp-validation-for="ProjectPM_Name" class="text-danger"></span>
+                </div>
+
+                
+                <div class="form-group">
+                    <label asp-for="ClientName"></label>
+                    <input asp-for="ClientName" class="form-control" />
+                    <span asp-validation-for="ClientName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="leftright" style="padding-left:5%;padding-right:5%;">
+                <div class="form-group">
+                    <label asp-for="StartDate"></label>
+                    <input asp-for="StartDate" class="form-control" />
+                    <span asp-validation-for="StartDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EndDate"></label>
+                    <input asp-for="EndDate" class="form-control" />
+                    <span asp-validation-for="EndDate" class="text-danger"></span>
+                </div>
+                <div class="form-group" style="padding-bottom:15%;">
+                    <label asp-for="Progress"></label>
+                    <input asp-for="Progress" class="form-control" max="100" min="0" />
+                    <span asp-validation-for="Progress" class="text-danger"></span>
+                </div>
+                <div style="width:40%; margin-left:60%;">
+                    <input type="submit" class="btn btn-primary btn-block" value="Create Project" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>

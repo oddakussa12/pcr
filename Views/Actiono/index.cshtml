@@ -1,0 +1,19 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Choose excel file to upload</title>
+</head>
+<body>
+    @using (Html.BeginForm("Import", "Actiono", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        @Html.Raw(ViewBag.Error)
+        <span>MPP or Excel File </span><input type="file" name="formFile" />
+        <br />
+        <input type="submit" value="Import" />
+    }
+</body>
+</html>

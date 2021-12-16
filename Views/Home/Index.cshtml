@@ -1,0 +1,126 @@
+﻿@model IEnumerable<ASP.NET_CORE_MVC_EMP_MGMT.Models.Project>
+@using ASP.NET_CORE_MVC_EMP_MGMT.Models
+<head>
+    <link rel="stylesheet" href="~/css/index.css" />
+
+</head>
+<body>
+    <!-- create two column of the page-->
+    <div class="row">
+
+        <div class="left-page" >
+            <h3 style="font-family:Helvetica, Arial, sans-serif ;color:white; text-align:center;">Menu</h3>
+            <hr style="border-width: 6px;color:white;" />
+            <div>
+                <a asp-controller="Home" asp-action="Index">
+                    <button type="button" class="collapsible" style="font-size:17px;">
+                        <i class="fas fa-home" style="padding-right:12px;"></i>
+                        Home
+                    </button>
+                </a>
+            </div>
+            <button type="button" class="collapsible" style="font-size:17px;">
+                <i class="fa fa-folder" style="padding-right:12px;"></i>Projects  <i class="fas fa-angle-right"></i>
+            </button>
+            <div class="content" style="background-color:darkblue;">
+                @foreach (var project in Model)
+                {
+                    <a asp-controller="Risk" asp-action="RiskTable" asp-route-id="@project.ProjectCode"
+                       style="color:white;">@project.projectName</a><br /> <hr style="border-width:5px;" />
+                }
+
+            </div>
+            <div>
+                <a asp-controller="Project" asp-action="CreateNewProject">
+                    <button type="button" class="collapsible" style="font-size:17px;">
+                        <i class="fas fa-folder-plus" style="padding-right:12px;"></i>Create Project <i class="fas fa-plus"></i>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a asp-controller="Project" asp-action="ProjectSummary">
+                    <button type="button" class="collapsible" style="font-size:17px;">
+                        <i class="fa fa-file-signature" style="padding-right:12px;">  </i>Project Summary
+                    </button>
+                </a>
+            </div>
+        </div><!--end left page-->
+
+
+        <div class="right-page" style="margin-top:60px;" id="mainbody">
+            <h5>Projects in IE</h5>
+            <div class="right-row">
+                @foreach (var project in Model)
+                {
+
+                    <div class="right-column">
+                        <a asp-action="RiskTable" asp-controller="Risk" asp-route-id="@project.ProjectCode">
+                            <div class="card">
+                                <h6 style="color:black;">@project.projectName</h6>
+                                <p>@project.ProjectPM_Name</p>
+                            </div>
+                        </a>
+                    </div>
+                }
+                <div class="right-column">
+                    <div class="card">
+                        <a asp-controller="Project" asp-action="CreateNewProject" style="text-decoration:none;"><h3 style="color:#33bbff">New Project </h3></a>
+                        <h5 style="color:#33bbff"><i class="fas fa-plus"></i></h5>
+                    </div>
+                </div>
+            </div>
+            <h5 style="padding:5px;">Detail of all projects</h5>
+            
+            <div class="right-row">
+                <table border="1" style="width:100%;margin-top:4px;">
+                    <thead style="background-color:darkorange;">
+                        <tr>
+                            <th>Code</th>
+                            <th>Project Name</th>
+                            <th>Client Name</th>
+                            <th>PM Name</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Progress</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var project in Model)
+                        {
+                            <tr>
+                                <td>@project.ProjectCode</td>
+                                <td>@project.projectName</td>
+                                <td>@project.ClientName</td>
+                                <td>@project.ProjectPM_Name</td>
+                                <td>@project.StartDate</td>
+                                <td>@project.EndDate</td>
+                                <td>@project.Progress</td>
+                                <td>
+                                    <a asp-controller="Project" asp-action="EditUpdateProject" asp-route-id="@project.ProjectCode">
+                                        <i class="fa fa-marker"></i>
+                                    </a>
+                                    <a asp-controller="Project" asp-action="DeleteProject" style="margin-left:5px;"
+                                       asp-route-id="@project.ProjectCode" class="text-danger"
+                                       onclick="return confirm('Delete Project?')">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                    <a asp-controller="Risk" asp-action="RiskTable" style="margin-left:5px;"
+                                       asp-route-id="@project.ProjectCode" asp-for="@project.ProjectCode" class="text-success">
+                                        <i class="fa fa-list"></i>
+                                    </a>
+                                </td>
+
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div><!--end div containg the table in index page-->
+
+        </div>
+
+
+    </div>
+    
+</body>

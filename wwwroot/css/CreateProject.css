@@ -1,0 +1,14 @@
+﻿body {
+}
+.leftright {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 500px; /* Should be removed. Only for demonstration */
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: inline-flex;
+    clear: both;
+}
